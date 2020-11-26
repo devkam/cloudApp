@@ -10,7 +10,7 @@ using cloudApp.Models;
 namespace cloudApp.Migrations.SqlServerMigrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20201119213654_Initial")]
+    [Migration("20201126105916_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -34,9 +34,6 @@ namespace cloudApp.Migrations.SqlServerMigrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImageContent")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImageLink")

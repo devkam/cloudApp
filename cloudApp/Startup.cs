@@ -43,7 +43,7 @@ namespace cloudApp
 
             // azure
             services.AddSingleton<IAzKeyVaultService>(new AzKeyVaultService(appSettings.KeyVaultName));
-            services.AddScoped<IAzBlobStorageService, AzBlobStorageService>(); // transient?
+            services.AddScoped<IAzBlobStorageService, AzBlobStorageService>();
             services.AddScoped<IAzQueueStorageService, AzQueueStorageService>();
         }
 
