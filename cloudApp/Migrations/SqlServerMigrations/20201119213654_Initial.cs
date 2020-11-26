@@ -16,7 +16,6 @@ namespace cloudApp.Migrations.SqlServerMigrations
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Author = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Created = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ImageContent = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ImageLink = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     MiniatureLink = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },

@@ -33,7 +33,7 @@ namespace cloudApp.Controllers
             try
             {
                 var image = _mapper.Map<Image>(model);
-                var guid = await _imageService.UploadImageAsync(image);
+                var guid = await _imageService.UploadImageAsync(image, model.ImageContent);
                 return Ok(new CreatedImageResponseResource { Guid = guid });
             }
             catch (Exception ex)

@@ -34,9 +34,6 @@ namespace cloudApp.Migrations.SqlServerMigrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ImageContent")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("ImageLink")
                         .HasColumnType("nvarchar(max)");
 

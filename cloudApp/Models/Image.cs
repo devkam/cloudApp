@@ -14,8 +14,6 @@ namespace cloudApp.Models
 
         public DateTime Created { get; set;}
 
-        public string ImageContent { get; set; }
-
         public string ImageLink { get; set; }
 
         public string MiniatureLink { get; set; }

@@ -24,7 +24,7 @@ namespace cloudApp.Services.Api
             _azQueueStorageService = azQueueStorageService;
         }
 
-        public async Task<string> UploadImageAsync(Image image)
+        public async Task<string> UploadImageAsync(Image image, string content)
         {
             image.Id = Guid.NewGuid();
             image.Created = DateTime.Now;
@@ -32,7 +32,7 @@ namespace cloudApp.Services.Api
             try
             {
                 var guid = image.Id.ToString();
-                var imageLink = await _azBlobStorageService.UploadImageFromBase64(IMAGES_CONTAINER_NAME, guid, image.ImageContent);
+                var imageLink = await _azBlobStorageService.UploadImageFromBase64(IMAGES_CONTAINER_NAME, guid, content);
 
                 image.ImageLink = imageLink;
 
